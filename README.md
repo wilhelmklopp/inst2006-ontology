@@ -1,1 +1,3 @@
-# inst2006-ontology
+# INST2006 Ontology
+
+Our wonderful Restaurant ontology
