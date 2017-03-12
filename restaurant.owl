@@ -25,16 +25,19 @@
         <Class IRI="#Supplier"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#escargot"/>
+        <Class IRI="#Ingredients"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Ingredients"/>
+        <NamedIndividual IRI="#escargot"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#bobby"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Menu_Item"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isOrderedBy"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Alcoholic_Beverage"/>
@@ -61,13 +64,16 @@
         <DataProperty IRI="#hasExpiry"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#owner_mcownerface"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#farmer_steve"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#owner_mcownerface"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#pepsi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPreparedBy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#carl"/>
@@ -79,6 +85,18 @@
         <NamedIndividual IRI="#raw_beef"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#cooked"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDrunkBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isNeededFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#seats"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#table_4"/>
     </Declaration>
     <Declaration>
@@ -88,22 +106,31 @@
         <Class IRI="#Cook"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isSuppliedBy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Waiter"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#drinks"/>
+        <ObjectProperty IRI="#isEatenBy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#sue"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#drinks"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#dave"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cooking_Assistant"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Owner"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Cooking_Assistant"/>
+        <ObjectProperty IRI="#isWaitedBy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#table_1"/>
@@ -121,28 +148,31 @@
         <ObjectProperty IRI="#assists"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasVolume"/>
+        <ObjectProperty IRI="#isManagedBy"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#wally"/>
+        <DataProperty IRI="#hasVolume"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#isAboveDrinkingAge"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Bartender"/>
+        <NamedIndividual IRI="#wally"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#wine"/>
+        <Class IRI="#Bartender"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ice_tea"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#orange_juice"/>
+        <NamedIndividual IRI="#wine"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#orange_juice"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Dessert"/>
@@ -172,10 +202,10 @@
         <ObjectProperty IRI="#orders"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Manager"/>
+        <ObjectProperty IRI="#supplies"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#supplies"/>
+        <Class IRI="#Manager"/>
     </Declaration>
     <Declaration>
         <Class IRI="#People"/>
@@ -184,10 +214,10 @@
         <ObjectProperty IRI="#manages"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Drink_Menu_Item"/>
+        <Class IRI="#Side"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Side"/>
+        <Class IRI="#Drink_Menu_Item"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#table_2"/>
@@ -199,25 +229,34 @@
         <ObjectProperty IRI="#prepares"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#jeff"/>
+        <ObjectProperty IRI="#isAssistedBy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Customer"/>
+        <ObjectProperty IRI="#isMadeBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#jeff"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#baked_potato"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Customer"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Sous_Chef"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasCost"/>
+        <ObjectProperty IRI="#isDeliveredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#delivers"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasSalary"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#delivers"/>
+        <DataProperty IRI="#hasCost"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Non-Alcoholic_Beverage"/>
@@ -637,18 +676,80 @@
         <NamedIndividual IRI="#wally"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">500</Literal>
     </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#assists"/>
+        <ObjectProperty IRI="#isAssistedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#cooked"/>
+        <ObjectProperty IRI="#isCookedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#cooks"/>
+        <ObjectProperty IRI="#isMadeBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#delivers"/>
+        <ObjectProperty IRI="#isDeliveredBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#drinks"/>
+        <ObjectProperty IRI="#isDrunkBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#eats"/>
+        <ObjectProperty IRI="#isEatenBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isMadeUpOf"/>
+        <ObjectProperty IRI="#isNeededFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isManagedBy"/>
+        <ObjectProperty IRI="#manages"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isOrderedBy"/>
+        <ObjectProperty IRI="#orders"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isPreparedBy"/>
+        <ObjectProperty IRI="#prepares"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isSuppliedBy"/>
+        <ObjectProperty IRI="#supplies"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isWaitedBy"/>
+        <ObjectProperty IRI="#waits"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#seats"/>
+        <ObjectProperty IRI="#sitsAt"/>
+    </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#sitsAt"/>
     </FunctionalObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#manages"/>
     </TransitiveObjectProperty>
+    <ReflexiveObjectProperty>
+        <ObjectProperty IRI="#isManagedBy"/>
+    </ReflexiveObjectProperty>
+    <ReflexiveObjectProperty>
+        <ObjectProperty IRI="#manages"/>
+    </ReflexiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#assists"/>
         <ObjectUnionOf>
             <Class IRI="#Cooking_Assistant"/>
             <Class IRI="#Sous_Chef"/>
         </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#cooked"/>
+        <Class IRI="#Cook"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#cooks"/>
@@ -667,12 +768,56 @@
         <Class IRI="#Customer"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAssistedBy"/>
+        <Class IRI="#Chef"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isCookedBy"/>
         <Class IRI="#Ingredients"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDeliveredBy"/>
+        <Class IRI="#Menu_Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDrunkBy"/>
+        <Class IRI="#Drink_Menu_Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEatenBy"/>
+        <Class IRI="#Food_Menu_Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isMadeBy"/>
+        <Class IRI="#Food_Menu_Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isMadeUpOf"/>
         <Class IRI="#Menu_Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isManagedBy"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isNeededFor"/>
+        <Class IRI="#Ingredients"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isOrderedBy"/>
+        <Class IRI="#Menu_Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isPreparedBy"/>
+        <Class IRI="#Drink_Menu_Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSuppliedBy"/>
+        <Class IRI="#Ingredients"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isWaitedBy"/>
+        <Class IRI="#Table"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#manages"/>
@@ -685,6 +830,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#prepares"/>
         <Class IRI="#Bartender"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#seats"/>
+        <Class IRI="#Table"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#sitsAt"/>
@@ -703,6 +852,10 @@
         <Class IRI="#Chef"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#cooked"/>
+        <Class IRI="#Ingredients"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#cooks"/>
         <Class IRI="#Food_Menu_Item"/>
     </ObjectPropertyRange>
@@ -719,12 +872,59 @@
         <Class IRI="#Food_Menu_Item"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#isAssistedBy"/>
+        <ObjectUnionOf>
+            <Class IRI="#Cooking_Assistant"/>
+            <Class IRI="#Sous_Chef"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#isCookedBy"/>
+        <Class IRI="#Cook"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDeliveredBy"/>
+        <Class IRI="#Waiter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDrunkBy"/>
+        <Class IRI="#Customer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEatenBy"/>
+        <Class IRI="#Customer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isMadeBy"/>
         <Class IRI="#Cook"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isMadeUpOf"/>
         <Class IRI="#Ingredients"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isManagedBy"/>
+        <Class IRI="#Manager"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isNeededFor"/>
+        <Class IRI="#Menu_Item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isOrderedBy"/>
+        <Class IRI="#Customer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isPreparedBy"/>
+        <Class IRI="#Bartender"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSuppliedBy"/>
+        <Class IRI="#Supplier"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isWaitedBy"/>
+        <Class IRI="#Waiter"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#manages"/>
@@ -737,6 +937,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#prepares"/>
         <Class IRI="#Drink_Menu_Item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#seats"/>
+        <Class IRI="#Customer"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#sitsAt"/>
@@ -831,7 +1035,15 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasLoggedHours"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </FacetRestriction>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">168</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasName"/>
@@ -847,17 +1059,25 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasSeatingCapacity"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+            </FacetRestriction>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasVolume"/>
         <DatatypeRestriction>
             <Datatype abbreviatedIRI="xsd:double"/>
             <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
-                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0</Literal>
+                <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">0.0</Literal>
             </FacetRestriction>
             <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
-                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0</Literal>
+                <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">100.0</Literal>
             </FacetRestriction>
         </DatatypeRestriction>
     </DataPropertyRange>
