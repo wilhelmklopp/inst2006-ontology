@@ -564,7 +564,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasLoggedHours"/>
         <NamedIndividual IRI="#carl"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1000</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasSalary"/>
@@ -584,7 +584,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasLoggedHours"/>
         <NamedIndividual IRI="#george_michael"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">500</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasSalary"/>
@@ -669,7 +669,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasLoggedHours"/>
         <NamedIndividual IRI="#wally"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3000</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasSalary"/>
